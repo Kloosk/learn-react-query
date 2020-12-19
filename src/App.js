@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {useQuery,QueryClientProvider,QueryClient} from "react-query";
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const queryClient = new QueryClient();
+
+export default function App() {
+    return (
+        <QueryClientProvider client={queryClient}>
+            <Example />
+        </QueryClientProvider>
+    )
 }
+const Example = () => {
+    const fetch = async () => {
+        const data = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        return data;
+    };
+    const {data,status} = useQuery('posts',fetch);
+  return (
+      <div>
+          <h2>Posts</h2>
+          {status === "loading" && (
+              <p>Loading...</p>
+          )}
+          {status === "error" && (
+              <p>Error in fetching data</p>
+          )}
+          {status === "success" && (
+              data.data.map((el,i) => <div key={i}>{el.title}</div>)
+          )}
 
-export default App;
+      </div>
+  );
+};
+
