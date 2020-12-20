@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import Users from "./Users";
 import Posts from "./Posts";
 import User from "./User";
+import AnotherPost from "./AnotherPost";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,7 @@ export default function App() {
             <Nav setPage={setPage}/>
             {page ? <Users/> : <Posts/>}
             <User/>
+            <AnotherPost/>
         </QueryClientProvider>
     )
 };

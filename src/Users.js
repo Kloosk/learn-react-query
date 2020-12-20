@@ -7,7 +7,7 @@ const Users = () => {
         const data = await axios.get('https://jsonplaceholder.typicode.com/users');
         return data;
     };
-    const {data,status} = useQuery('posts',fetch);
+    const {data,status} = useQuery('users',fetch);
     return (
         <div>
             <h2>Users</h2>

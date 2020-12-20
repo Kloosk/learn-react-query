@@ -1,13 +1,8 @@
 import React from 'react';
-import axios from "axios";
-import {useQuery} from "react-query";
+import usePosts from "./hoooks/usePosts";
 
 const Posts = () => {
-    const fetch = async () => {
-        const data = await axios.get('https://jsonplaceholder.typicode.com/posts');
-        return data;
-    };
-    const {data,status} = useQuery('posts',fetch);
+    const {data,status} = usePosts();
     return (
         <div>
             <h2>Posts</h2>
@@ -20,7 +15,7 @@ const Posts = () => {
                 <p>Error in fetching data</p>
             )}
             {status === "success" && (
-                data.data.map((el,i) => <div key={i}>{el.title}</div>)
+                data.map((el,i) => <div key={i}>{el.title}</div>)
             )}
         </div>
     )

@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608296780753</updated>
       <workItem from="1608296784752" duration="3661000" />
-      <workItem from="1608416720708" duration="5305000" />
+      <workItem from="1608416720708" duration="7221000" />
+      <workItem from="1608469415650" duration="5056000" />
     </task>
     <servers />
   </component>
